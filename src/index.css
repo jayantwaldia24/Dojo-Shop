@@ -11,3 +11,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: Optivenus;
+  src: url(fonts/OPTIVenus-BoldExtended.otf);
+}
+
+/*----------------------Navbar-----------------------------------------*/
+
+
+.Nav {
+  max-height: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  font-family: 'Optivenus';
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+
+.section {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: space-between;
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+
+
+/*----------------------Cover-----------------------------------------*/
+
+
+.main {
+  display: flex;
+  background-color: #BBC8D0;
+  width: 100%;
+  overflow: hidden;
+  height: 800px;
+  background-image: url("./assets/MainCover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.main-tagline {
+  width: 300px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0);
+  color: white;
+  margin: auto 40px;
+  font-size: 34px;
+  font-weight: 800;
+  font-family: 'Darker Grotesque', sans-serif;
+  text-align: center;
+}
