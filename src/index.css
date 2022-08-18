@@ -137,6 +137,11 @@ code {
 
 @media only screen and (max-width: 600px) {
 
+
+  .main {
+    background-image: url("./assets/MainCoverMobile.jpg");
+  }
+
   .main,
   .about {
     margin: 40px 20px;
