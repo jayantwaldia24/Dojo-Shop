@@ -57,6 +57,7 @@ code {
 
 .main {
   display: flex;
+  justify-content: center;
   background-color: #BBC8D0;
   margin: 40px 80px;
   overflow: hidden;
@@ -71,7 +72,7 @@ code {
 
 .main-tagline {
   width: 300px;
-  padding: 50px;
+  padding: 250px;
   border: 2px solid white;
   background-color: rgba(0, 0, 0, 0.1);
   color: white;
@@ -149,7 +150,7 @@ code {
   }
 
   .main-tagline {
-    padding: 10px;
+    padding: 50px;
     margin-top: auto;
   }
 
