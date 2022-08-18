@@ -2,7 +2,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <>
+    <div className="Navbar">
       <div className="Nav">
         <div className="logo">Dojo Shop</div>
         <div className="section">
@@ -15,7 +15,7 @@ function Navbar() {
         </div>
         <div className="actions"></div>
       </div>
-    </>
+    </div>
   );
 }
 
