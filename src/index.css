@@ -139,7 +139,11 @@ code {
 
   .main,
   .about {
-    margin: 10px 20px;
+    margin: 40px 20px;
+  }
+
+  .main-tagline {
+    padding: 0px;
   }
 
 }
