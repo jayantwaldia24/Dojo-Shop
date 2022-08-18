@@ -29,6 +29,8 @@ code {
   background-color: black;
   position: sticky;
   top: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .Nav {
@@ -38,9 +40,6 @@ code {
   padding: 20px;
   font-family: 'Optivenus';
 
-  background-color: rgb(0, 0, 0);
-  justify-content: center;
-  align-items: center;
   color: white;
 }
 
@@ -123,7 +122,8 @@ code {
 
 .collection {
   background-color: white;
-  margin: 40px 80px;
+  padding: 80px;
+  margin: 0px 40px;
   overflow: hidden;
   text-align: center;
 }
@@ -133,7 +133,7 @@ code {
 .shop-grid {
   margin: 80px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
   align-items: center;
@@ -175,6 +175,12 @@ img {
     margin-top: auto;
   }
 
+  .collection {
+    background-color: white;
+    padding: 10px;
+    margin: 20px 10px;
+
+  }
 
   .shop-grid {
     grid-template-columns: 1fr;
