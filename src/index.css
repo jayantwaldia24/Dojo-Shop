@@ -25,7 +25,7 @@ code {
 
 
 .Nav {
-  max-height: 20px;
+  margin: 40px 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 20px;
@@ -35,8 +35,6 @@ code {
   background-color: rgba(255, 255, 255);
   justify-content: center;
   align-items: center;
-  text-align: center;
-
 }
 
 
@@ -44,7 +42,7 @@ code {
 
 .section {
   display: flex;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   justify-content: space-between;
   font-family: 'Darker Grotesque', sans-serif;
@@ -121,13 +119,9 @@ code {
   margin: 40px 80px;
   overflow: hidden;
   text-align: center;
-
 }
 
 
-.items {
-  width: 100%;
-}
 
 .shop-grid {
   margin: 80px auto;
@@ -179,6 +173,15 @@ img {
     grid-template-columns: 1fr;
     row-gap: 20px;
   }
+
+  .section {
+    display: none;
+  }
+
+  .Nav {
+    margin: 0px;
+  }
+
 
 
 }
