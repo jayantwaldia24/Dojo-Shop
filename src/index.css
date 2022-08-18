@@ -17,6 +17,9 @@ code {
   src: url(fonts/OPTIVenus-BoldExtended.otf);
 }
 
+
+
+
 /*----------------------Navbar-----------------------------------------*/
 
 
@@ -48,6 +51,8 @@ code {
 
 
 /*-----------------------------------Cover-----------------------------------------*/
+
+
 
 
 .main {
@@ -82,7 +87,6 @@ code {
   background-color: black;
   display: flex;
   flex-direction: column;
-  height: 500px;
   margin: 40px 80px;
   justify-content: space-between;
 }
@@ -96,10 +100,12 @@ code {
 }
 
 .about-shop {
+
   color: white;
   text-align: center;
   font-family: 'Darker Grotesque', sans-serif;
-  font-size: 34px;
+  font-size: 28px;
+  padding: 20px 50px;
 }
 
 /*-----------------------------------Collection-----------------------------------------*/
@@ -109,8 +115,7 @@ code {
 
 .collection {
   background-color: white;
-  margin: 60px 150px;
-  font-size: 34px;
+  padding: 50px;
   text-align: center;
 }
 
@@ -123,6 +128,6 @@ code {
 
 .item-1 {
   height: 100px;
-  background-color: white;
+  background-color: rgb(181, 181, 181);
   border: 2px solid black;
 }

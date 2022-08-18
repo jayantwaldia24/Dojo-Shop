@@ -4,7 +4,7 @@ function Collection() {
   return (
     <>
       <div className="collection">
-        <h3 style={{ fontFamily: "Optivenus" }}>THE COLLECTION</h3>
+        <p style={{ fontFamily: "Optivenus" }}>THE COLLECTION</p>
         <div className="shop-grid">
           <div className="item-1"></div>
           <div className="item-1"></div>
