@@ -360,6 +360,7 @@ ul {
     display: grid;
     grid-template-columns: 1fr;
     overflow: hidden;
+    padding: 10px;
   }
 
   .display-image-1,
@@ -368,7 +369,7 @@ ul {
   }
 
   .footer {
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     row-gap: 5px;
   }
 
