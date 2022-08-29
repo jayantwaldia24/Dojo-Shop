@@ -31,6 +31,7 @@ code {
   top: 0;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .Nav {
@@ -39,7 +40,6 @@ code {
   grid-template-columns: 1fr 1fr 1fr;
   padding: 20px;
   font-family: 'Optivenus';
-
   color: white;
 }
 
@@ -87,7 +87,6 @@ code {
   font-family: 'Darker Grotesque', sans-serif;
   text-align: center;
 }
-
 
 .about {
   background-color: black;
@@ -156,10 +155,10 @@ code {
 .drop-items {
   display: grid;
   margin: 50px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   justify-content: space-between;
   padding: 20px 50px;
-  column-gap: 30px;
+  column-gap: 50px;
 }
 
 .drop-desc {
@@ -173,7 +172,6 @@ code {
 }
 
 .drop-image {
-  width: 300px;
   margin: 50px auto;
   padding: 5px;
   border: 5px ridge #B5B2AB;
@@ -184,6 +182,41 @@ code {
   height: 100%;
 }
 
+
+
+.newsletter {
+  background-color: #F5F5F5;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 0px;
+  justify-content: space-between;
+}
+
+
+.display-image {
+  margin: 100px auto;
+  min-width: 400px;
+}
+
+
+.display-image>img {
+  width: 100%;
+  height: 100%;
+  transform: rotate(345deg);
+}
+
+.subscribe {
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  margin: 80px auto;
+}
+
+.subscribe>p {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 22px;
+}
 
 
 @media only screen and (max-width: 1000px) {
@@ -260,5 +293,13 @@ code {
   }
 
 
+
+  .newsletter {
+    background-color: #F5F5F5;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
 
 }

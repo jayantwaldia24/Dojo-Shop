@@ -2,6 +2,7 @@ import Collection from "./components/Collection";
 import Cover from "./components/Cover";
 import Drop from "./components/Drop";
 import Navbar from "./components/Navbar";
+import Newsletter from "./components/Newsletter";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Cover />
       <Collection />
       <Drop />
+      <Newsletter />
     </div>
   );
 }
