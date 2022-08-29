@@ -184,39 +184,103 @@ code {
 
 
 
+/*-----------------------------------NewsLetter-----------------------------------------*/
+
+
 .newsletter {
   background-color: #F5F5F5;
   color: black;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   margin: 0px;
+  overflow: hidden;
   justify-content: space-between;
+  padding: 0px 30px;
 }
 
 
-.display-image {
-  margin: 100px auto;
-  min-width: 400px;
+.display-image-1,
+.display-image-2 {
+  margin: auto;
 }
 
 
-.display-image>img {
+.display-image-1>img {
   width: 100%;
   height: 100%;
   transform: rotate(345deg);
+}
+
+.display-image-2>img {
+  width: 100%;
+  height: 100%;
+  transform: rotate(10deg);
 }
 
 .subscribe {
   text-align: center;
   font-size: 24px;
   padding: 20px;
-  margin: 80px auto;
+  margin: 50px auto;
 }
 
 .subscribe>p {
   font-family: 'Darker Grotesque', sans-serif;
   font-size: 22px;
 }
+
+
+/*-----------------------------------Footer-----------------------------------------*/
+
+
+.whitespace {
+  height: 80px;
+  background-color: white;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: black;
+  color: white;
+  padding: 60px 40px;
+  font-family: Optivenus;
+  column-gap: 40px;
+  justify-content: space-between;
+}
+
+h5 {
+  margin: 0px;
+}
+
+ul {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.logo-footer {
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-app>img {
+  width: 70%;
+  height: 65%;
+}
+
+.copyrights {
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 18px;
+}
+
+
+
 
 
 @media only screen and (max-width: 1000px) {
@@ -247,8 +311,6 @@ code {
     padding: 50px;
     margin-top: auto;
   }
-
-
 
   .collection {
     background-color: white;
@@ -292,8 +354,6 @@ code {
     font-size: 22px;
   }
 
-
-
   .newsletter {
     background-color: #F5F5F5;
     color: black;
@@ -301,5 +361,26 @@ code {
     grid-template-columns: 1fr;
     overflow: hidden;
   }
+
+  .display-image-1,
+  .display-image-2 {
+    display: none;
+  }
+
+  .footer {
+    grid-template-columns: 1.5fr 1fr;
+    row-gap: 5px;
+  }
+
+  .mobile-app {
+    margin-top: 30px;
+
+  }
+
+  .mobile-app>img {
+    width: 50%;
+    height: 100%;
+  }
+
 
 }
