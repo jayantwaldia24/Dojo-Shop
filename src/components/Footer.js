@@ -36,10 +36,31 @@ function Footer() {
             <li>Investors</li>
           </ul>
         </div>
+
+        <div className="copyrights">
+          <h5> Made By -</h5>
+          <ul>
+            <li>
+              <a href="https://jayant.vercel.app/" target="_blank">
+                <span className="Highlight">
+                  <b>Jayant Waldia</b>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                style={{ color: "white" }}
+                href="https://jayant.vercel.app/"
+                target="_blank"
+              >
+                Source Code
+              </a>
+            </li>
+          </ul>
+        </div>
         <div className="mobile-app">
           <img src={application} alt="Download via App Store"></img>
         </div>
-        <div className="copyrights">By - Jayant Waldia</div>
       </div>
     </>
   );

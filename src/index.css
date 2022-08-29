@@ -259,6 +259,7 @@ ul {
   text-align: left;
   list-style-type: none;
   padding: 0px;
+  cursor: pointer;
 }
 
 .logo-footer {
@@ -275,9 +276,45 @@ ul {
   color: white;
   text-align: center;
   border-radius: 10px;
-  font-family: 'Darker Grotesque', sans-serif;
-  font-size: 18px;
+  text-align: left;
+  cursor: pointer;
 }
+
+a {
+  text-decoration: none !important;
+}
+
+
+
+
+.Highlight {
+  animation: color-change 4s infinite;
+}
+
+
+
+@keyframes color-change {
+  0% {
+    color: white;
+  }
+
+  25% {
+    color: rgb(190, 248, 223);
+  }
+
+  50% {
+    color: rgb(192, 216, 252);
+  }
+
+  75% {
+    color: rgb(252, 162, 166);
+  }
+
+  100% {
+    color: white;
+  }
+}
+
 
 
 
@@ -370,7 +407,7 @@ ul {
 
   .footer {
     grid-template-columns: 1fr 1fr;
-    row-gap: 5px;
+    row-gap: 20px;
   }
 
   .mobile-app {
@@ -382,6 +419,4 @@ ul {
     width: 50%;
     height: 100%;
   }
-
-
 }
