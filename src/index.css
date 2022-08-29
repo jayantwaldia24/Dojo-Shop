@@ -245,8 +245,7 @@ code {
   color: white;
   padding: 60px 40px;
   font-family: Optivenus;
-  column-gap: 40px;
-  justify-content: space-between;
+  column-gap: 20px;
 }
 
 h5 {
@@ -406,8 +405,8 @@ a {
   }
 
   .footer {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 20px;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
   }
 
   .mobile-app {
