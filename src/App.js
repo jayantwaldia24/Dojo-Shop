@@ -1,19 +1,9 @@
-import Collection from "./components/Collection";
-import Cover from "./components/Cover";
-import Drop from "./components/Drop";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Newsletter from "./components/Newsletter";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Cover />
-      <Collection />
-      <Drop />
-      <Newsletter />
-      <Footer />
+      <HomePage />
     </div>
   );
 }
