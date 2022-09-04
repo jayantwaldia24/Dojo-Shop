@@ -1,13 +1,14 @@
-import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="max-w-[1240px mx-auto py-16 px-4 grid lg:grid-cols-3 gap-5 text-gray-300">
+    <div className="max-w-[1240px mx-auto py-16 px-6 grid lg:grid-cols-3 gap-5 text-gray-300">
       <div>
         <h1 className="w-full text-3xl font-bold ">Shop Dojo</h1>
-        <p className="py-4">lmao</p>
+        <p className="py-4">Made by Jayant Waldia</p>
         <div className="flex justify-between md:w-[75%] my-5">
           <FaGithub size={30} />
+          <FaLinkedin size={30} />
           <FaTwitter size={30} />
           <FaInstagram size={30} />
         </div>
