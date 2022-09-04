@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
+import { FaHeart, FaShoppingCart } from "react-icons/fa";
 
 function Navbar() {
   const [mobNav, setMobNav] = useState(false);
@@ -7,8 +8,8 @@ function Navbar() {
     setMobNav(!mobNav);
   };
   return (
-    <div className="flex justify-between items-center h-20 max-w-[100%] mx-auto px-8 bg-black opacity-90 text-white sticky top-0 z-1000">
-      <h1 className="w-full text-3xl font-bold ">Shop Dojo</h1>
+    <div className="flex md:grid-cols-3 justify-between items-center h-20 max-w-[100%] mx-auto px-8 bg-black opacity-90 text-white sticky top-0 z-1000">
+      <h1 className="w-full text-xl lg:text-3xl font-bold ">Shop Dojo</h1>
       <ul className="hidden md:flex">
         <li className="p-4">Women</li>
         <li className="p-4">Men</li>
@@ -17,9 +18,32 @@ function Navbar() {
         <li className="p-4">Drop</li>
         <li className="p-4">Sale</li>
       </ul>
-      <div onClick={handleMobView} className="block md:hidden">
-        {mobNav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
-      </div>
+      <ul className="hidden md:flex justify-end">
+        <li className="p-4">
+          <FaHeart size={20} />
+        </li>
+        <li className="p-4">
+          <FaShoppingCart size={20} />
+        </li>
+        <li className="p-4">
+          <AiOutlineUser size={20} />
+        </li>
+      </ul>
+
+      <ul className="flex block md:hidden ">
+        <li className="p-4">
+          <FaHeart size={20} />
+        </li>
+        <li className="p-4">
+          <FaShoppingCart size={20} />
+        </li>
+        <li className="p-4">
+          <AiOutlineUser size={20} />
+        </li>
+        <li onClick={handleMobView} className="p-4">
+          {mobNav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </li>
+      </ul>
       <div
         className={
           mobNav
