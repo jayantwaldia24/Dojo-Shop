@@ -23,11 +23,10 @@ function Navbar() {
       <div
         className={
           mobNav
-            ? "fixed left-0 top-0 w-[60%] border-r h-full border-r-gray-900 bg-black ease-in-out duration-1000 md:hidden"
+            ? "fixed left-0 top-[70px] w-[60%] border-r h-full border-r-gray-900 bg-black ease-in-out duration-1000 md:hidden"
             : "fixed left-[-100%]"
         }
       >
-        <h1 className="w-full text-3xl font-bold m-4 p-4">Shop Dojo</h1>
         <ul className="uppercase p-4">
           <li className="p-4 border-b border-gray-600">Women</li>
           <li className="p-4 border-b border-gray-600">Men</li>

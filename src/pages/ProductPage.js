@@ -1,11 +1,5 @@
-import Navbar from "../components/Navbar";
-
 function ProductPage() {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default ProductPage;
