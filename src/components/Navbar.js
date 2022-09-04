@@ -7,7 +7,7 @@ function Navbar() {
     setMobNav(!mobNav);
   };
   return (
-    <div className="flex justify-between items-center h-24 max-w-[100%] mx-auto px-8 text-white ">
+    <div className="flex justify-between items-center h-20 max-w-[100%] mx-auto px-8 bg-black opacity-90 text-white sticky top-0 z-1000">
       <h1 className="w-full text-3xl font-bold ">Shop Dojo</h1>
       <ul className="hidden md:flex">
         <li className="p-4">Women</li>
