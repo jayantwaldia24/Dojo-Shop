@@ -44,16 +44,6 @@ function Footer() {
             <li className="py-2 text-sm">Shoes</li>
           </ul>
         </div>
-        <div>
-          <h6 className="font-medium text-gray-400">Support</h6>
-          <ul>
-            <li className="py-2 text-sm">Shoes</li>
-            <li className="py-2 text-sm">Shoes</li>
-            <li className="py-2 text-sm">Shoes</li>
-            <li className="py-2 text-sm">Shoes</li>
-            <li className="py-2 text-sm">Shoes</li>
-          </ul>
-        </div>
       </div>
     </div>
   );
