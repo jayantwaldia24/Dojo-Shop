@@ -18,12 +18,12 @@ function Navbar() {
         <li className="p-4">Sale</li>
       </ul>
       <div onClick={handleMobView} className="block md:hidden">
-        {!mobNav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+        {mobNav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
       </div>
       <div
         className={
-          !mobNav
-            ? "fixed left-0 top-0 w-[60%] border-r h-full border-r-gray-900 bg-black ease-in-out duration-1000"
+          mobNav
+            ? "fixed left-0 top-0 w-[60%] border-r h-full border-r-gray-900 bg-black ease-in-out duration-1000 md:hidden"
             : "fixed left-[-100%]"
         }
       >
