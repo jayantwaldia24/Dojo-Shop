@@ -3,6 +3,23 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: "Optivenus";
+  src: url("./fonts/OPTIVenus-BoldExtended.otf");
+}
+
+@font-face {
+  font-family: "sg-light";
+  src: url("./fonts/SpaceGrotesk-Light.otf");
+}
+
+@font-face {
+  font-family: "sg-regular";
+  src: url("./fonts/SpaceGrotesk-Regular.otf");
+}
+
+
+
 body {
   margin: 0;
   background-color: black;

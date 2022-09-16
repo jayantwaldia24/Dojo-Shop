@@ -1,5 +1,7 @@
+import Collection from "../components/Collection";
+
 function ProductPage() {
-  return <div></div>;
+  return <Collection />;
 }
 
 export default ProductPage;

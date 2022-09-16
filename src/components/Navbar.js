@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
-import { FaHeart, FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [mobNav, setMobNav] = useState(false);
@@ -8,9 +9,14 @@ function Navbar() {
     setMobNav(!mobNav);
   };
   return (
-    <header className="fixed w-full">
+    <header className="fixed w-full font-sgLight">
       <div className="flex md:grid md:grid-cols-3 justify-between items-center h-20 max-w-[100%] mx-auto px-8 bg-black  text-white sticky top-0 z-1000">
-        <h1 className="w-full text-xl lg:text-3xl font-bold ">Shop Dojo</h1>
+        <Link to="/">
+          <h1 className="w-full text-xl lg:text-2xl font-optivenus">
+            Shop Dojo
+          </h1>
+        </Link>
+
         <ul className="hidden md:flex">
           <li className="p-4">Women</li>
           <li className="p-4">Men</li>

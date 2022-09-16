@@ -2,19 +2,19 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <div className="text-white max-w-[100%] w-full h-screen p-10">
-      <div className="w-[100%] mt-[300px] text-left flex flex-col gap-8 items-start justify-between">
+    <div className="text-white max-w-[100%] w-full h-screen p-10 font-bold font-sgRegular">
+      <div className="w-[100%] mt-[400px] md:ml-5 text-left flex flex-col gap-8 items-start justify-between">
         <Link to="/products">
-          <button className="bg-transparent hover:bg-white text-white-700 font-bold hover:text-black py-4 px-10 border-[2px] border-white-500 hover:border-transparent rounded-3xl text-l md:text-xl">
+          <button className="bg-transparent tracking-wider hover:bg-white text-white-700 font-bold hover:text-black py-4 px-10 border-[2px] border-white-500 hover:border-transparent rounded-3xl text-l md:text-xl">
             New Collection
           </button>
         </Link>
 
-        <p className="text-2xl md:text-5xl sm:text-4xl p-2">
-          GET 30% OFF
+        <p className="text-xl md:text-3xl sm:text-2xl p-2 font-light tracking-wider font-optivenus">
+          <span className="text-[gray]">GET</span> 30% OFF
           <br></br>
           <br></br>
-          USE CODE: DOJO50
+          <span className="text-[gray]">USE CODE: </span>DOJO30
         </p>
       </div>
     </div>

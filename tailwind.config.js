@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        optivenus: ["Optivenus", "sans-serif"],
+        sgLight: ["sg-light", "sans-serif"],
+        sgRegular: ["sg-regular", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
