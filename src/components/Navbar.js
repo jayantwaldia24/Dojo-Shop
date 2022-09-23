@@ -62,7 +62,9 @@ function Navbar() {
             <li className="p-4 border-b border-gray-600">Women</li>
             <li className="p-4 border-b border-gray-600">Men</li>
             <li className="p-4 border-b border-gray-600">Brands</li>
-            <li className="p-4 border-b border-gray-600">Collection</li>
+            <Link to="/collection">
+              <li className="p-4 border-b border-gray-600">Collection</li>
+            </Link>
             <li className="p-4 border-b border-gray-600">Drop</li>
             <li className="flex gap-3 p-4 border-b border-gray-600">
               <FaShoppingCart size={20} />

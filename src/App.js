@@ -9,11 +9,11 @@ function App() {
   return (
     <div className="flex flex-col h-screen justify-between">
       <Navbar />
-      <div className="mt-100px">
+      <div className="mt-20">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route exact path="/collection" element={<Collection />} />
-          <Route exact path="/product" element={<ProductPage />} />
+          <Route exact path="/product/:id" element={<ProductPage />} />
         </Routes>
       </div>
       <Footer />
