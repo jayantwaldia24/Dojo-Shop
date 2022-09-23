@@ -54,7 +54,7 @@ function Navbar() {
         <div
           className={
             mobNav
-              ? "fixed left-0 top-[70px] w-[60%] border-r h-full border-r-gray-900 bg-black ease-in-out duration-1000 md:hidden z-900"
+              ? "fixed left-0 top-[70px] w-[100%] border-r h-full border-r-gray-900 bg-black ease-in-out duration-1000 md:hidden z-900"
               : "fixed left-[-100%]"
           }
         >
