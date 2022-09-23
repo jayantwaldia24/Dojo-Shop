@@ -2,7 +2,7 @@ import { FaInstagram, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="max-w-[1240px mx-auto py-16 px-6 md:px-20 grid lg:grid-cols-3 gap-5 text-gray-300 font-sgRegular">
+    <div className="w-full mx-auto my-8 px-10 py-2 grid lg:grid-cols-3 gap-5 justify-between text-gray-300 font-sgRegular">
       <div>
         <h1 className="w-full text-3xl font-bold font-optivenus ">Shop Dojo</h1>
         <p className="py-4">

@@ -1,7 +1,11 @@
-import Collection from "../components/Collection";
+import { products } from "../backend/db/products";
 
 function ProductPage() {
-  return <Collection />;
+  return (
+    <>
+      <div className="h-screen bg-white">lmao</div>
+    </>
+  );
 }
 
 export default ProductPage;

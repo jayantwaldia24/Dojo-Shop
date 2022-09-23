@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div className="text-white max-w-[100%] w-full h-screen p-10 font-bold font-sgRegular">
       <div className="w-[100%] mt-[400px] md:ml-5 text-left flex flex-col gap-8 items-start justify-between">
-        <Link to="/products">
+        <Link to="/collection">
           <button className="bg-transparent tracking-wider hover:bg-white text-white-700 font-bold hover:text-black py-4 px-10 border-[2px] border-white-500 hover:border-transparent rounded-3xl text-l md:text-xl">
             New Collection
           </button>

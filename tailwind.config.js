@@ -3,6 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      visibility: ["group-hover"],
       fontFamily: {
         optivenus: ["Optivenus", "sans-serif"],
         sgLight: ["sg-light", "sans-serif"],
