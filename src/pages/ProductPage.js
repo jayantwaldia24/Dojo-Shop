@@ -1,14 +1,16 @@
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { products } from "../backend/db/products";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
+import { useCart } from "../context/CartContext";
 
 function ProductPage() {
   const { id } = useParams();
   const product = products.find((p) => p._id == id);
+  const { cart, addToCart } = useCart();
+  console.log(cart);
   const reviews = { href: "#", average: 4, totalCount: 117 };
-  console.log(product);
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -20,7 +22,7 @@ function ProductPage() {
       <div className="bg-white">
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
-            <ol
+            <ul
               role="list"
               className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
             >
@@ -56,7 +58,7 @@ function ProductPage() {
                   {product.name}
                 </a>
               </li>
-            </ol>
+            </ul>
           </nav>
 
           {/* Image gallery */}
@@ -229,6 +231,10 @@ function ProductPage() {
 
                 <button
                   type="submit"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    addToCart(product);
+                  }}
                   className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   Add to bag
