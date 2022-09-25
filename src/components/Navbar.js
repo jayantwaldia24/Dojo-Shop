@@ -5,8 +5,14 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [mobNav, setMobNav] = useState(false);
+  const [cartNav, setCartNav] = useState(false);
   const handleMobView = () => {
     setMobNav(!mobNav);
+    if (cartNav) setCartNav(false);
+  };
+  const handleCartView = () => {
+    setCartNav(!cartNav);
+    if (mobNav) setMobNav(false);
   };
   return (
     <header className="fixed w-full font-sgLight z-10">
@@ -29,19 +35,19 @@ function Navbar() {
           {/* <li className="p-4">
             <FaHeart size={20} />
           </li> */}
-          <li className="p-4">
+          <li onClick={handleCartView} className="p-4 cursor-pointer">
             <FaShoppingCart size={20} />
           </li>
-          <li className="p-4">
+          <li className="p-4 cursor-pointer">
             <AiOutlineUser size={20} />
           </li>
         </ul>
 
         <ul className="flex block md:hidden ">
-          <li className="p-4">
+          <li onClick={handleCartView} className="p-4 cursor-pointer">
             <FaShoppingCart size={20} />
           </li>
-          <li onClick={handleMobView} className="p-4">
+          <li onClick={handleMobView} className="p-4 pr-2 cursor-pointer">
             {mobNav ? (
               <AiOutlineClose size={20} />
             ) : (
@@ -69,6 +75,18 @@ function Navbar() {
               Profile
             </li>
           </ul>
+        </div>
+        <div
+          className={
+            cartNav
+              ? "fixed right-0 top-[70px] w-[80%] md:w-[30%] border-r h-full border-r-gray-900 bg-black ease-in-out duration-1000  z-900"
+              : "fixed right-[-100%]"
+          }
+        >
+          <div>
+            <AiOutlineClose size={25} onClick={handleCartView} />
+            <p>lamo xd</p>
+          </div>
         </div>
       </div>
     </header>

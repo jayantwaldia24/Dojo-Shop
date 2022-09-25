@@ -173,8 +173,8 @@ export default function CollectionPage() {
 
         <main className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pt-20 pb-6">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 font-optivenus">
-              Our Collection
+            <h1 className="text-xl md:text-3xl font-bold tracking-tight text-gray-900 font-optivenus">
+              Collection
             </h1>
 
             <div className="flex items-center">
