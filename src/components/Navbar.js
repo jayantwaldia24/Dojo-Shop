@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import MyCart from "./MyCart";
 
 function Navbar() {
   const [mobNav, setMobNav] = useState(false);
@@ -27,7 +28,7 @@ function Navbar() {
           <li className="p-4">Women</li>
           <li className="p-4">Men</li>
           <li className="p-4">Brands</li>
-          <Link to="/collection">
+          <Link to="/collections">
             <li className="p-4">Collection</li>
           </Link>
         </ul>
@@ -66,7 +67,7 @@ function Navbar() {
             <li className="p-4 border-b border-gray-600">Women</li>
             <li className="p-4 border-b border-gray-600">Men</li>
             <li className="p-4 border-b border-gray-600">Brands</li>
-            <Link to="/collection">
+            <Link to="/collections">
               <li className="p-4 border-b border-gray-600">Collection</li>
             </Link>
 
@@ -76,18 +77,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div
-          className={
-            cartNav
-              ? "fixed right-0 top-[70px] w-[80%] md:w-[30%] border-r h-full border-r-gray-900 bg-black ease-in-out duration-1000  z-900"
-              : "fixed right-[-100%]"
-          }
-        >
-          <div>
-            <AiOutlineClose size={25} onClick={handleCartView} />
-            <p>lamo xd</p>
-          </div>
-        </div>
+        <MyCart handleCartView={handleCartView} cartNav={cartNav} />
       </div>
     </header>
   );
