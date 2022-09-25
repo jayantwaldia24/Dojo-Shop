@@ -17,14 +17,13 @@ function Navbar() {
           </h1>
         </Link>
 
-        <ul className="hidden md:flex">
+        <ul className="hidden md:flex justify-center">
           <li className="p-4">Women</li>
           <li className="p-4">Men</li>
           <li className="p-4">Brands</li>
           <Link to="/collection">
             <li className="p-4">Collection</li>
           </Link>
-          <li className="p-4">Drop</li>
         </ul>
         <ul className="hidden md:flex justify-end">
           {/* <li className="p-4">
@@ -39,11 +38,10 @@ function Navbar() {
         </ul>
 
         <ul className="flex block md:hidden ">
-          {/* <li className="p-4">
-            <FaHeart size={20} />
-          </li> */}
-
-          <li onClick={handleMobView} className="p-2">
+          <li className="p-4">
+            <FaShoppingCart size={20} />
+          </li>
+          <li onClick={handleMobView} className="p-4">
             {mobNav ? (
               <AiOutlineClose size={20} />
             ) : (
@@ -65,11 +63,7 @@ function Navbar() {
             <Link to="/collection">
               <li className="p-4 border-b border-gray-600">Collection</li>
             </Link>
-            <li className="p-4 border-b border-gray-600">Drop</li>
-            <li className="flex gap-3 p-4 border-b border-gray-600">
-              <FaShoppingCart size={20} />
-              Cart
-            </li>
+
             <li className=" flex gap-3 p-4 border-b border-gray-600">
               <AiOutlineUser size={20} />
               Profile
