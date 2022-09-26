@@ -1,10 +1,13 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../context/cart/CartContext";
 
 export default function MyCart({ handleCartView, cartNav }) {
   const { cart } = useCart();
+  let subTotal = cart.reduce((acc, curr) => {
+    return (acc += curr.price);
+  }, 0);
 
   return (
     <Transition.Root show={cartNav} as={Fragment}>
@@ -34,10 +37,10 @@ export default function MyCart({ handleCartView, cartNav }) {
                 leaveTo="translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                  <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                  <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl font-sgRegular">
                     <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
                       <div className="flex items-start justify-between">
-                        <Dialog.Title className="text-lg font-medium text-gray-900">
+                        <Dialog.Title className="text-lg font-medium text-gray-900 font-optivenus">
                           MY CART
                         </Dialog.Title>
                         <div className="ml-3 flex h-7 items-center">
@@ -59,7 +62,7 @@ export default function MyCart({ handleCartView, cartNav }) {
                             className="-my-6 divide-y divide-gray-200"
                           >
                             {cart.map((item) => (
-                              <li key={item.id} className="flex py-6">
+                              <li key={item._id} className="flex py-6">
                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                   <img
                                     src={item.img}
@@ -74,7 +77,15 @@ export default function MyCart({ handleCartView, cartNav }) {
                                       <h3>
                                         <a href="#">{item.name}</a>
                                       </h3>
-                                      <p className="ml-4">{item.price}</p>
+                                      <p className="ml-4">
+                                        ₹{" "}
+                                        {item.price
+                                          .toString()
+                                          .replace(
+                                            /\B(?=(\d{3})+(?!\d))/g,
+                                            ","
+                                          )}
+                                      </p>
                                     </div>
                                     <p className="mt-1 text-sm text-gray-500">
                                       {item.brand}
@@ -103,7 +114,12 @@ export default function MyCart({ handleCartView, cartNav }) {
                     <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Subtotal</p>
-                        <p>$262.00</p>
+                        <p>
+                          ₹{" "}
+                          {subTotal
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        </p>
                       </div>
                       <p className="mt-0.5 text-sm text-gray-500">
                         Shipping and taxes calculated at checkout.
@@ -118,7 +134,7 @@ export default function MyCart({ handleCartView, cartNav }) {
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>
-                          or
+                          or{" "}
                           <button
                             type="button"
                             className="font-medium text-indigo-600 hover:text-indigo-500"

@@ -1,16 +1,16 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { products } from "../backend/db/products";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../context/cart/CartContext";
 
 function ProductPage() {
   const { id } = useParams();
-  const product = products.find((p) => p._id == id);
-  const { cart, addToCart } = useCart();
-  console.log(cart);
+  const product = products.find((p) => p._id === parseInt(id));
+  const { addToCart } = useCart();
   const reviews = { href: "#", average: 4, totalCount: 117 };
+  const navigate = useNavigate();
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -29,12 +29,12 @@ function ProductPage() {
               {product.breadcrumbs.map((breadcrumb) => (
                 <li key={breadcrumb.id}>
                   <div className="flex items-center">
-                    <a
-                      href={breadcrumb.href}
+                    <button
+                      onClick={() => navigate("/collections")}
                       className="mr-2 text-sm font-medium text-gray-900"
                     >
                       {breadcrumb.name}
-                    </a>
+                    </button>
                     <svg
                       width={16}
                       height={20}
@@ -151,12 +151,12 @@ function ProductPage() {
                 <div className="mt-10">
                   <div className="flex items-center justify-between">
                     <h3 className="text-sm font-medium text-gray-900">Size</h3>
-                    <a
+                    <button
                       href="#"
                       className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
                     >
                       Size guide
-                    </a>
+                    </button>
                   </div>
 
                   <RadioGroup
