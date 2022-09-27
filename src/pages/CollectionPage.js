@@ -58,7 +58,7 @@ function classNames(...classes) {
 
 export default function CollectionPage() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const { products, filterProduct } = useContext(ProductContext);
+  const { productsList, sortProduct } = useContext(ProductContext);
 
   return (
     <div className="bg-white mt-10">
@@ -206,7 +206,9 @@ export default function CollectionPage() {
                         <Menu.Item key={option.name}>
                           {({ active }) => (
                             <button
-                              onClick={() => filterProduct()}
+                              onClick={() => {
+                                sortProduct(option.name);
+                              }}
                               className={classNames(
                                 option.current
                                   ? "font-medium text-gray-900"
@@ -313,7 +315,7 @@ export default function CollectionPage() {
               </form>
               {/* Product grid */}
               <div className="lg:col-span-3">
-                <ProductList products={products} />
+                <ProductList productsList={productsList} />
               </div>
             </div>
           </section>
