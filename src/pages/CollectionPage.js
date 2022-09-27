@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useContext, useState } from "react";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import {
@@ -9,6 +9,7 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import ProductList from "../components/ProductList";
+import { ProductContext } from "../context/products/ProductContext";
 
 const sortOptions = [
   { name: "Best Rating", href: "#", current: false },
@@ -57,6 +58,7 @@ function classNames(...classes) {
 
 export default function CollectionPage() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const { products, filterProduct } = useContext(ProductContext);
 
   return (
     <div className="bg-white mt-10">
@@ -203,8 +205,8 @@ export default function CollectionPage() {
                       {sortOptions.map((option) => (
                         <Menu.Item key={option.name}>
                           {({ active }) => (
-                            <a
-                              href={option.href}
+                            <button
+                              onClick={() => filterProduct()}
                               className={classNames(
                                 option.current
                                   ? "font-medium text-gray-900"
@@ -214,7 +216,7 @@ export default function CollectionPage() {
                               )}
                             >
                               {option.name}
-                            </a>
+                            </button>
                           )}
                         </Menu.Item>
                       ))}
@@ -311,7 +313,7 @@ export default function CollectionPage() {
               </form>
               {/* Product grid */}
               <div className="lg:col-span-3">
-                <ProductList />
+                <ProductList products={products} />
               </div>
             </div>
           </section>

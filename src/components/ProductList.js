@@ -1,8 +1,6 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ProductContext } from "../context/products/ProductContext";
-function ProductList() {
-  const { products } = useContext(ProductContext);
+
+function ProductList({ products }) {
   return (
     <>
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 sm:grid-cols-2 border-t-[1px] border-l-[1px] border-black">
