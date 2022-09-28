@@ -5,7 +5,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import ScrollToTop from "./components/ScrollToTop";
 import { CartProvider } from "./context/cart/CartContext";
-import { FilterProvider } from "./context/filter/FilterContext";
 import { ProductProvider } from "./context/products/ProductContext";
 import { CartDrawerProvider } from "./context/navbar/CartDrawerContext";
 
@@ -16,10 +15,8 @@ root.render(
       <CartDrawerProvider>
         <ProductProvider>
           <CartProvider>
-            <FilterProvider>
-              <ScrollToTop />
-              <App />
-            </FilterProvider>
+            <ScrollToTop />
+            <App />
           </CartProvider>
         </ProductProvider>
       </CartDrawerProvider>

@@ -66,7 +66,7 @@ export const products = [
       { name: "S", inStock: true },
       { name: "M", inStock: true },
       { name: "L", inStock: true },
-      { name: "XL", inStock: true },
+      { name: "XL", inStock: false },
     ],
     description:
       "The Nike Air Jacket is a celebration of your outdoor journey, of the time spent in solitude as you chase your running goals. Breathable at the back, with coverage up top, the jacket is geared to keep you feeling loose with every step. A bungee at the back lets you control the shape and feel along your route.",
@@ -111,9 +111,9 @@ export const products = [
     ],
     reviews: { href: "#", average: 4, totalCount: 221 },
     sizes: [
-      { name: "XS", inStock: false },
+      { name: "XS", inStock: true },
       { name: "S", inStock: true },
-      { name: "M", inStock: true },
+      { name: "M", inStock: false },
       { name: "L", inStock: true },
       { name: "XL", inStock: true },
     ],
@@ -163,8 +163,8 @@ export const products = [
       { name: "XS", inStock: false },
       { name: "S", inStock: true },
       { name: "M", inStock: true },
-      { name: "L", inStock: true },
-      { name: "XL", inStock: true },
+      { name: "L", inStock: false },
+      { name: "XL", inStock: false },
     ],
     description:
       "The Nike Yoga Dri-FIT Luxe Cropped Tank is made from Infinalon fabric that feels irresistibly soft and smooth while providing a gently compressive feel that hugs your body, so you can stretch and move without limits. Mixed-material panels create a fluid look and extra breathability while you move.",
@@ -209,8 +209,8 @@ export const products = [
     ],
     reviews: { href: "#", average: 5, totalCount: 161 },
     sizes: [
-      { name: "XS", inStock: false },
-      { name: "S", inStock: true },
+      { name: "XS", inStock: true },
+      { name: "S", inStock: false },
       { name: "M", inStock: true },
       { name: "L", inStock: true },
       { name: "XL", inStock: true },
@@ -307,7 +307,7 @@ export const products = [
     ],
     reviews: { href: "#", average: 3, totalCount: 57 },
     sizes: [
-      { name: "XS", inStock: false },
+      { name: "XS", inStock: true },
       { name: "S", inStock: true },
       { name: "M", inStock: true },
       { name: "L", inStock: true },

@@ -24,7 +24,7 @@ const filters = [
     options: [
       { value: "Men", label: "Men", checked: false },
       { value: "Women", label: "Women", checked: false },
-      { value: "Other", label: "Other", checked: true },
+      { value: "Other", label: "Other", checked: false },
     ],
   },
   {
@@ -38,20 +38,18 @@ const filters = [
         label: "Jordan Essentials",
         checked: false,
       },
-      { value: "organization", label: "Organization", checked: false },
-      { value: "accessories", label: "Accessories", checked: false },
+      { value: "nike-sb", label: "Nike SB", checked: false },
     ],
   },
   {
     id: "size",
     name: "Size",
     options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
+      { value: "XS", label: "XS", checked: false },
+      { value: "S", label: "S", checked: false },
+      { value: "M", label: "M", checked: false },
+      { value: "L", label: "L", checked: false },
+      { value: "XL", label: "XL", checked: false },
     ],
   },
 ];
@@ -62,7 +60,8 @@ function classNames(...classes) {
 
 export default function CollectionPage() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const { productsList, sortProduct } = useContext(ProductContext);
+  const { productsList, sortProduct, filterProduct } =
+    useContext(ProductContext);
 
   return (
     <div className="bg-white mt-10">
@@ -150,6 +149,9 @@ export default function CollectionPage() {
                                   >
                                     <input
                                       id={`filter-mobile-${section.id}-${optionIdx}`}
+                                      onChange={() =>
+                                        filterProduct(option.value)
+                                      }
                                       name={`${section.id}[]`}
                                       defaultValue={option.value}
                                       type="checkbox"
@@ -296,6 +298,12 @@ export default function CollectionPage() {
                               >
                                 <input
                                   id={`filter-${section.id}-${optionIdx}`}
+                                  onChange={(e) =>
+                                    filterProduct(
+                                      e.target.checked,
+                                      option.value
+                                    )
+                                  }
                                   name={`${section.id}[]`}
                                   defaultValue={option.value}
                                   type="checkbox"
