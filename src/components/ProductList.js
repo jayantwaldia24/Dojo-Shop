@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function ProductList({ productsList }) {
-  useEffect(() => {}, []);
   return (
     <>
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 sm:grid-cols-2 border-t-[1px] border-l-[1px] border-black">

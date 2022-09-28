@@ -2,17 +2,19 @@ import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useCartDrawer } from "../context/navbar/CartDrawerContext";
 import MyCart from "./MyCart";
 
 function Navbar() {
   const [mobNav, setMobNav] = useState(false);
-  const [cartNav, setCartNav] = useState(false);
+  const { isCartDrawerOpen, setCartDrawerOpen } = useCartDrawer();
+
   const handleMobView = () => {
     setMobNav(!mobNav);
-    if (cartNav) setCartNav(false);
+    if (isCartDrawerOpen) setCartDrawerOpen(false);
   };
   const handleCartView = () => {
-    setCartNav(!cartNav);
+    setCartDrawerOpen(!isCartDrawerOpen);
     if (mobNav) setMobNav(false);
   };
   return (
@@ -77,7 +79,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <MyCart handleCartView={handleCartView} cartNav={cartNav} />
+        <MyCart handleCartView={handleCartView} />
       </div>
     </header>
   );

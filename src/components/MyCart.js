@@ -2,15 +2,17 @@ import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useCart } from "../context/cart/CartContext";
+import { useCartDrawer } from "../context/navbar/CartDrawerContext";
 
-export default function MyCart({ handleCartView, cartNav }) {
+export default function MyCart({ handleCartView }) {
   const { cart } = useCart();
+  const { isCartDrawerOpen } = useCartDrawer();
   let subTotal = cart.reduce((acc, curr) => {
     return (acc += curr.price);
   }, 0);
 
   return (
-    <Transition.Root show={cartNav} as={Fragment}>
+    <Transition.Root show={isCartDrawerOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={handleCartView}>
         <Transition.Child
           as={Fragment}

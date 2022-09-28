@@ -1,4 +1,3 @@
-import ProductList from "./ProductList";
 import { products } from "../backend/db/products";
 import { Link } from "react-router-dom";
 
