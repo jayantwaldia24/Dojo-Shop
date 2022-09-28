@@ -1,34 +1,17 @@
 import { createContext, useReducer } from "react";
 import { products } from "../../backend/db/products";
-import { productSortReducer, productFilterReducer } from "./ProductReducer";
+import { productReducer } from "./ProductReducer";
 
 export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [productsList, dispatchProductList] = useReducer(
-    productSortReducer,
-    products
-  );
-
-  const [productsFilterList, dispatchProductFilterList] = useReducer(
-    productFilterReducer,
+    productReducer,
     products
   );
 
   const filterProduct = (check, name) => {
     console.log(check, name);
-    if (check === true && name === "men") {
-      dispatchProductFilterList({
-        type: "FILTER_MEN",
-        payload: productsFilterList,
-      });
-    }
-    if (check === true && name === "women") {
-      dispatchProductFilterList({
-        type: "FILTER_WOMEN",
-        payload: productsFilterList,
-      });
-    }
   };
 
   const sortProduct = (filterType) => {
@@ -42,7 +25,7 @@ export const ProductProvider = ({ children }) => {
   };
   return (
     <ProductContext.Provider
-      value={{ productsList, sortProduct, filterProduct, productsFilterList }}
+      value={{ productsList, sortProduct, filterProduct }}
     >
       {children}
     </ProductContext.Provider>
