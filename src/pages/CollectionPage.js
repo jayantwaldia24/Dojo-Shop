@@ -28,12 +28,16 @@ const filters = [
     ],
   },
   {
-    id: "category",
-    name: "Category",
+    id: "collection",
+    name: "Collection",
     options: [
-      { value: "new-arrivals", label: "New Arrivals", checked: false },
-      { value: "sale", label: "Sale", checked: false },
-      { value: "travel", label: "Travel", checked: true },
+      { value: "nike-dri-fit", label: "Nike Dri-FIT", checked: false },
+      { value: "nike-air", label: "Nike Air", checked: false },
+      {
+        value: "jordan-essentials",
+        label: "Jordan Essentials",
+        checked: false,
+      },
       { value: "organization", label: "Organization", checked: false },
       { value: "accessories", label: "Accessories", checked: false },
     ],

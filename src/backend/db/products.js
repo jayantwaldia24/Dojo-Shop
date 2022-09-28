@@ -23,6 +23,11 @@ import item5_1 from "../../toolkit/assets/item-5-1.jpg";
 import item5_2 from "../../toolkit/assets/item-5-2.jpg";
 import item5_3 from "../../toolkit/assets/item-5-3.jpg";
 import item5_4 from "../../toolkit/assets/item-5-4.jpg";
+import item6 from "../../toolkit/assets/item-6.png";
+import item6_1 from "../../toolkit/assets/item-6-1.jpg";
+import item6_2 from "../../toolkit/assets/item-6-2.jpg";
+import item6_3 from "../../toolkit/assets/item-6-3.jpg";
+import item6_4 from "../../toolkit/assets/item-6-4.jpg";
 
 export const products = [
   {
@@ -256,6 +261,54 @@ export const products = [
     ],
     description:
       "The Nike SB Crew is made from mid-weight French terry fabric that's smooth and naturally breathable. An elastic bungee at the back of the collar adds a utility-inspired finish and a chest pocket gives you a convenient space to stash small items.",
+    highlights: [
+      "Hand cut and sewn locally",
+      "Dyed with our proprietary colors",
+      "Pre-washed & pre-shrunk",
+      "Ultra-soft 100% cotton",
+    ],
+    details:
+      'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+  },
+  {
+    _id: 6,
+    brand: "Nike Air",
+    name: "Women's Pique Polo",
+    price: 2747,
+    img: item6,
+    category: "women",
+    href: "#",
+    breadcrumbs: [
+      { id: 1, name: "Women", href: "#" },
+      { id: 2, name: "Collection", href: "#" },
+    ],
+    images: [
+      {
+        src: item6_4,
+        alt: "Two each of gray, white, and black shirts laying flat.",
+      },
+      {
+        src: item6_2,
+        alt: "Model wearing plain black basic tee.",
+      },
+      {
+        src: item6_3,
+        alt: "Model wearing plain gray basic tee.",
+      },
+      {
+        src: item6_1,
+        alt: "Model wearing plain white basic tee.",
+      },
+    ],
+    sizes: [
+      { name: "XS", inStock: false },
+      { name: "S", inStock: true },
+      { name: "M", inStock: true },
+      { name: "L", inStock: true },
+      { name: "XL", inStock: true },
+    ],
+    description:
+      "Freshen up your sportswear staples in this airy pique polo. Its elongated sleeves provide a casual, roomy look while the elastic hem and slight crop make it easy to pair with your favourite high-rise leggings and shorts. A front zip provides styling and fit options.",
     highlights: [
       "Hand cut and sewn locally",
       "Dyed with our proprietary colors",
