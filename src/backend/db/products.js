@@ -18,6 +18,11 @@ import item4_1 from "../../toolkit/assets/item-4-1.jpg";
 import item4_2 from "../../toolkit/assets/item-4-2.jpg";
 import item4_3 from "../../toolkit/assets/item-4-3.jpg";
 import item4_4 from "../../toolkit/assets/item-4-4.jpg";
+import item5 from "../../toolkit/assets/item-5.png";
+import item5_1 from "../../toolkit/assets/item-5-1.jpg";
+import item5_2 from "../../toolkit/assets/item-5-2.jpg";
+import item5_3 from "../../toolkit/assets/item-5-3.jpg";
+import item5_4 from "../../toolkit/assets/item-5-4.jpg";
 
 export const products = [
   {
@@ -203,6 +208,54 @@ export const products = [
     ],
     description:
       "Commit to the grind and flex hard in the Nike Legend T-Shirt. Made with soft, lightweight jersey fabric, it feels silky smooth on your skin and wicks sweat to keep you dry.",
+    highlights: [
+      "Hand cut and sewn locally",
+      "Dyed with our proprietary colors",
+      "Pre-washed & pre-shrunk",
+      "Ultra-soft 100% cotton",
+    ],
+    details:
+      'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+  },
+  {
+    _id: 5,
+    brand: "Nike SB",
+    name: "Skate Crew",
+    price: 3795,
+    img: item5,
+    category: "men",
+    href: "#",
+    breadcrumbs: [
+      { id: 1, name: "Men", href: "#" },
+      { id: 2, name: "Collection", href: "#" },
+    ],
+    images: [
+      {
+        src: item5_4,
+        alt: "Two each of gray, white, and black shirts laying flat.",
+      },
+      {
+        src: item5_2,
+        alt: "Model wearing plain black basic tee.",
+      },
+      {
+        src: item5_3,
+        alt: "Model wearing plain gray basic tee.",
+      },
+      {
+        src: item5_1,
+        alt: "Model wearing plain white basic tee.",
+      },
+    ],
+    sizes: [
+      { name: "XS", inStock: false },
+      { name: "S", inStock: true },
+      { name: "M", inStock: true },
+      { name: "L", inStock: true },
+      { name: "XL", inStock: true },
+    ],
+    description:
+      "The Nike SB Crew is made from mid-weight French terry fabric that's smooth and naturally breathable. An elastic bungee at the back of the collar adds a utility-inspired finish and a chest pocket gives you a convenient space to stash small items.",
     highlights: [
       "Hand cut and sewn locally",
       "Dyed with our proprietary colors",
