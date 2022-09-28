@@ -60,6 +60,7 @@ export const products = [
         alt: "Model wearing plain white basic tee.",
       },
     ],
+    reviews: { href: "#", average: 4, totalCount: 126 },
     sizes: [
       { name: "XS", inStock: false },
       { name: "S", inStock: true },
@@ -108,6 +109,7 @@ export const products = [
         alt: "Model wearing plain white basic tee.",
       },
     ],
+    reviews: { href: "#", average: 4, totalCount: 221 },
     sizes: [
       { name: "XS", inStock: false },
       { name: "S", inStock: true },
@@ -156,6 +158,7 @@ export const products = [
         alt: "Model wearing plain white basic tee.",
       },
     ],
+    reviews: { href: "#", average: 3, totalCount: 17 },
     sizes: [
       { name: "XS", inStock: false },
       { name: "S", inStock: true },
@@ -204,6 +207,7 @@ export const products = [
         alt: "Model wearing plain white basic tee.",
       },
     ],
+    reviews: { href: "#", average: 5, totalCount: 161 },
     sizes: [
       { name: "XS", inStock: false },
       { name: "S", inStock: true },
@@ -252,6 +256,7 @@ export const products = [
         alt: "Model wearing plain white basic tee.",
       },
     ],
+    reviews: { href: "#", average: 4, totalCount: 27 },
     sizes: [
       { name: "XS", inStock: false },
       { name: "S", inStock: true },
@@ -300,6 +305,7 @@ export const products = [
         alt: "Model wearing plain white basic tee.",
       },
     ],
+    reviews: { href: "#", average: 3, totalCount: 57 },
     sizes: [
       { name: "XS", inStock: false },
       { name: "S", inStock: true },

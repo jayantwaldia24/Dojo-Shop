@@ -9,7 +9,6 @@ function ProductPage() {
   const { id } = useParams();
   const product = products.find((p) => p._id === parseInt(id));
   const { addToCart } = useCart();
-  const reviews = { href: "#", average: 4, totalCount: 117 };
   const navigate = useNavigate();
 
   function classNames(...classes) {
@@ -127,7 +126,7 @@ function ProductPage() {
                       <StarIcon
                         key={rating}
                         className={classNames(
-                          reviews.average > rating
+                          product.reviews.average > rating
                             ? "text-gray-900"
                             : "text-gray-200",
                           "h-5 w-5 flex-shrink-0"
@@ -136,12 +135,14 @@ function ProductPage() {
                       />
                     ))}
                   </div>
-                  <p className="sr-only">{reviews.average} out of 5 stars</p>
+                  <p className="sr-only">
+                    {product.reviews.average} out of 5 stars
+                  </p>
                   <a
-                    href={reviews.href}
+                    href={product.reviews.href}
                     className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500"
                   >
-                    {reviews.totalCount} reviews
+                    {product.reviews.totalCount} reviews
                   </a>
                 </div>
               </div>

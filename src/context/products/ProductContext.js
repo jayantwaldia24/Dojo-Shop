@@ -9,13 +9,17 @@ export const ProductProvider = ({ children }) => {
     productReducer,
     products
   );
+
+  const filterProduct = () => {};
+
   const sortProduct = (filterType) => {
     console.log(typeof filterType, filterType);
     if (filterType === "Price: Low to High") {
       dispatchProductList({ type: "LOW_TO_HIGH", payload: productsList });
-    }
-    if (filterType === "Price: High to Low") {
+    } else if (filterType === "Price: High to Low") {
       dispatchProductList({ type: "HIGH_TO_LOW", payload: productsList });
+    } else if (filterType === "Best Rating") {
+      dispatchProductList({ type: "BEST_RATING", payload: productsList });
     }
   };
   return (
