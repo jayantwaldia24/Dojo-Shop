@@ -10,16 +10,31 @@ export const ProductProvider = ({ children }) => {
     products
   );
 
-  const filterProduct = (check, name) => {
-    console.log(check, name);
+  const filterProduct = (isChecked, filterType, value) => {
+    console.log(isChecked, filterType, value);
+    if (filterType === "Sex" && isChecked === true) {
+      const filterList = productsList;
+      dispatchProductList({
+        type: "FILTER_SEX",
+        payload: filterList,
+        value: value,
+      });
+    }
+    if (isChecked === false) {
+      const filterList = productsList;
+      dispatchProductList({
+        type: "DEF",
+        payload: filterList,
+      });
+    }
   };
 
-  const sortProduct = (filterType) => {
-    if (filterType === "Price: Low to High") {
+  const sortProduct = (sortType) => {
+    if (sortType === "Price: Low to High") {
       dispatchProductList({ type: "LOW_TO_HIGH", payload: productsList });
-    } else if (filterType === "Price: High to Low") {
+    } else if (sortType === "Price: High to Low") {
       dispatchProductList({ type: "HIGH_TO_LOW", payload: productsList });
-    } else if (filterType === "Best Rating") {
+    } else if (sortType === "Best Rating") {
       dispatchProductList({ type: "BEST_RATING", payload: productsList });
     }
   };

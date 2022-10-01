@@ -60,6 +60,7 @@ function classNames(...classes) {
 
 export default function CollectionPage() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [isChecked, setIsCheked] = useState(false);
   const { productsList, sortProduct, filterProduct } =
     useContext(ProductContext);
 
@@ -149,9 +150,16 @@ export default function CollectionPage() {
                                   >
                                     <input
                                       id={`filter-mobile-${section.id}-${optionIdx}`}
-                                      onChange={() =>
-                                        filterProduct(option.value)
-                                      }
+                                      onChange={(e) => {
+                                        filterProduct(
+                                          e.target.checked,
+                                          section.name,
+                                          option.value
+                                        );
+                                        setIsCheked(
+                                          (option.checked = !option.checked)
+                                        );
+                                      }}
                                       name={`${section.id}[]`}
                                       defaultValue={option.value}
                                       type="checkbox"
@@ -301,6 +309,7 @@ export default function CollectionPage() {
                                   onChange={(e) =>
                                     filterProduct(
                                       e.target.checked,
+                                      section.name,
                                       option.value
                                     )
                                   }
