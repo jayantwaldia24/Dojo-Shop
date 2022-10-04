@@ -4,11 +4,13 @@ import heroClip from "../toolkit/assets/hero-clip.mp4";
 function Hero() {
   return (
     <div className="text-white w-[100%] h-screen font-bold font-sgRegular">
+      <div className="absolute top-0 left-0 w-[100%] h-[100%] bg-[rgba(0,0,0,0.5)]"></div>
       <video
         src={heroClip}
         autoPlay
         loop
         muted
+        playsinline
         className="w-[100%] h-[100%] object-cover"
       ></video>
       <div className="absolute w-[100%] top-0 mt-[400px] md:ml-10 m-5 text-left flex flex-col gap-8 items-start justify-center">
