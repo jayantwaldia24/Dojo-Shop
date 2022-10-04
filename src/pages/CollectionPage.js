@@ -60,9 +60,17 @@ function classNames(...classes) {
 
 export default function CollectionPage() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const [isChecked, setIsCheked] = useState(false);
-  const { productsList, sortProduct, filterProduct } =
+  const { productsList, sortProduct, getFilteredProducts } =
     useContext(ProductContext);
+  const [filtersData, setFiltersData] = useState({ sortBy: "", sex: "" });
+
+  const filteredProducts = getFilteredProducts(
+    productsList,
+    "Sex",
+    filtersData.sex
+  );
+
+  console.log(filteredProducts, "checkk");
 
   return (
     <div className="bg-white mt-10">
@@ -151,18 +159,14 @@ export default function CollectionPage() {
                                     <input
                                       id={`filter-mobile-${section.id}-${optionIdx}`}
                                       onChange={(e) => {
-                                        filterProduct(
-                                          e.target.checked,
-                                          section.name,
-                                          option.value
-                                        );
-                                        setIsCheked(
-                                          (option.checked = !option.checked)
-                                        );
+                                        setFiltersData((prev) => ({
+                                          ...prev,
+                                          sex: e.target.checked && option.value,
+                                        }));
                                       }}
                                       name={`${section.id}[]`}
                                       defaultValue={option.value}
-                                      type="checkbox"
+                                      type="radio"
                                       defaultChecked={option.checked}
                                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                     />
@@ -307,15 +311,14 @@ export default function CollectionPage() {
                                 <input
                                   id={`filter-${section.id}-${optionIdx}`}
                                   onChange={(e) =>
-                                    filterProduct(
-                                      e.target.checked,
-                                      section.name,
-                                      option.value
-                                    )
+                                    setFiltersData((prev) => ({
+                                      ...prev,
+                                      sex: e.target.checked && option.value,
+                                    }))
                                   }
                                   name={`${section.id}[]`}
                                   defaultValue={option.value}
-                                  type="checkbox"
+                                  type="radio"
                                   defaultChecked={option.checked}
                                   className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                 />
@@ -336,7 +339,7 @@ export default function CollectionPage() {
               </form>
               {/* Product grid */}
               <div className="lg:col-span-3">
-                <ProductList productsList={productsList} />
+                <ProductList productsList={filteredProducts} />
               </div>
             </div>
           </section>

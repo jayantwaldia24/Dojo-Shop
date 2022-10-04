@@ -10,22 +10,14 @@ export const ProductProvider = ({ children }) => {
     products
   );
 
-  const filterProduct = (isChecked, filterType, value) => {
-    console.log(isChecked, filterType, value);
-    if (filterType === "Sex" && isChecked === true) {
-      const filterList = productsList;
-      dispatchProductList({
-        type: "FILTER_SEX",
-        payload: filterList,
-        value: value,
-      });
-    }
-    if (isChecked === false) {
-      const filterList = productsList;
-      dispatchProductList({
-        type: "DEF",
-        payload: filterList,
-      });
+  const getFilteredProducts = (productsList, filterType, value) => {
+    if (filterType === "Sex") {
+      if (value === "Men") {
+        return productsList.filter((product) => product.category === "men");
+      }
+      if (value === "Women") {
+        return productsList.filter((product) => product.category === "women");
+      } else return productsList;
     }
   };
 
@@ -40,7 +32,7 @@ export const ProductProvider = ({ children }) => {
   };
   return (
     <ProductContext.Provider
-      value={{ productsList, sortProduct, filterProduct }}
+      value={{ productsList, sortProduct, getFilteredProducts }}
     >
       {children}
     </ProductContext.Provider>

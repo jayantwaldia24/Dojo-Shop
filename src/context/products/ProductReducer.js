@@ -1,5 +1,3 @@
-import { products } from "../../backend/db/products";
-
 export const productReducer = (data, action) => {
   switch (action.type) {
     case "LOW_TO_HIGH":
@@ -12,16 +10,6 @@ export const productReducer = (data, action) => {
           (el1, el2) => el2.reviews.average - el1.reviews.average
         ),
       ];
-    case "FILTER_SEX":
-      if (action.value === "Men") {
-        return products.filter((product) => product.category === "men");
-      }
-      if (action.value === "Women") {
-        return products.filter((product) => product.category === "women");
-      }
-    case "DEF":
-      return products;
-
     default:
       return data;
   }
