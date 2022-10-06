@@ -19,6 +19,36 @@ export const ProductProvider = ({ children }) => {
         return productsList.filter((product) => product.category === "women");
       } else return productsList;
     }
+    if (filterType === "Sex") {
+      if (value === "Men") {
+        return productsList.filter((product) => product.category === "men");
+      }
+      if (value === "Women") {
+        return productsList.filter((product) => product.category === "women");
+      } else return productsList;
+    }
+    if (filterType === "Collection") {
+      if (value === "nike-dri-fit") {
+        return productsList.filter(
+          (product) => product.brand === "Nike Dri-FIT"
+        );
+      }
+      if (value === "nike-air") {
+        return productsList.filter((product) => product.brand === "Nike Air");
+      }
+      if (value === "jordan-essentials") {
+        return productsList.filter(
+          (product) => product.brand === "Jordan Essentials"
+        );
+      }
+      if (value === "nike-sb") {
+        return productsList.filter((product) => product.brand === "Nike SB");
+      } else return productsList;
+    }
+
+    if (filterType === "") {
+      return productsList;
+    }
   };
 
   const sortProduct = (sortType) => {

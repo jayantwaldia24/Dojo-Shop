@@ -130,8 +130,8 @@ export const products = [
   },
   {
     _id: 3,
-    brand: "Nike Yoga Dri-FIT Luxe",
-    name: "Women's Cropped Tank",
+    brand: "Nike Dri-FIT",
+    name: "Women's Cropped Tank Yoga Luxe",
     price: 2895,
     img: item3,
     category: "women",
@@ -179,7 +179,7 @@ export const products = [
   },
   {
     _id: 4,
-    brand: "Nike Dri-FIT Legend",
+    brand: "Nike Dri-FIT",
     name: "Men's Graphic Training T-Shirt",
     price: 1795,
     img: item4,

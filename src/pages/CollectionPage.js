@@ -66,11 +66,9 @@ export default function CollectionPage() {
 
   const filteredProducts = getFilteredProducts(
     productsList,
-    "Sex",
+    filtersData.sortBy,
     filtersData.sex
   );
-
-  console.log(filteredProducts, "checkk");
 
   return (
     <div className="bg-white mt-10">
@@ -161,6 +159,8 @@ export default function CollectionPage() {
                                       onChange={(e) => {
                                         setFiltersData((prev) => ({
                                           ...prev,
+                                          sortBy:
+                                            e.target.checked && section.name,
                                           sex: e.target.checked && option.value,
                                         }));
                                       }}
@@ -313,6 +313,7 @@ export default function CollectionPage() {
                                   onChange={(e) =>
                                     setFiltersData((prev) => ({
                                       ...prev,
+                                      sortBy: e.target.checked && section.name,
                                       sex: e.target.checked && option.value,
                                     }))
                                   }
