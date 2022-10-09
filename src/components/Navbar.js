@@ -18,7 +18,7 @@ function Navbar() {
     if (mobNav) setMobNav(false);
   };
   return (
-    <header className="fixed w-full font-sgLight z-10">
+    <header className="fixed w-full font-sgLight z-10 opacity-90">
       <div className="flex md:grid md:grid-cols-3 justify-between items-center h-20 max-w-[100%] mx-auto px-4 md:px-8 bg-black  text-white sticky top-0 ">
         <Link to="/">
           <h1 className="w-full text-xl lg:text-2xl font-optivenus">
