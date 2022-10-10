@@ -73,7 +73,7 @@ function Footer() {
               rel="noopener noreferrer"
             >
               {" "}
-              <FaBehance size={25} />
+              <FaBehance size={20} />
             </a>
           </li>
         </ul>
