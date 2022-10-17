@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import dropItem from "../toolkit/assets/item-5.jpg";
 
 function Drop() {
@@ -14,9 +15,11 @@ function Drop() {
             any streetwear style. It is a timeless design with a regular cut and
             a round neckline. Thanks to the cotton fabric, you gain all-day.
           </p>
-          <button className="bg-transparent hover:bg-white text-white-700 font-bold hover:text-black py-3 px-8 border-[2px] border-white-500 hover:border-transparent rounded-3xl text-xl md:text-xl">
-            SHOP AT DOJO
-          </button>
+          <Link to="/collections">
+            <button className="bg-transparent hover:bg-white text-white-700 font-bold hover:text-black py-3 px-8 border-[2px] border-white-500 hover:border-transparent rounded-3xl text-xl md:text-xl">
+              SHOP AT DOJO
+            </button>
+          </Link>
         </div>
         <div>
           <img
