@@ -213,7 +213,7 @@ export const products = [
       { name: "S", inStock: false },
       { name: "M", inStock: true },
       { name: "L", inStock: true },
-      { name: "XL", inStock: true },
+      { name: "XL", inStock: false },
     ],
     description:
       "Commit to the grind and flex hard in the Nike Legend T-Shirt. Made with soft, lightweight jersey fabric, it feels silky smooth on your skin and wicks sweat to keep you dry.",
@@ -258,10 +258,10 @@ export const products = [
     ],
     reviews: { href: "#", average: 4, totalCount: 27 },
     sizes: [
-      { name: "XS", inStock: false },
+      { name: "XS", inStock: true },
       { name: "S", inStock: true },
       { name: "M", inStock: true },
-      { name: "L", inStock: true },
+      { name: "L", inStock: false },
       { name: "XL", inStock: true },
     ],
     description:
