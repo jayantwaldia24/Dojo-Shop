@@ -308,7 +308,7 @@ export const products = [
     reviews: { href: "#", average: 3, totalCount: 57 },
     sizes: [
       { name: "XS", inStock: true },
-      { name: "S", inStock: true },
+      { name: "S", inStock: false },
       { name: "M", inStock: true },
       { name: "L", inStock: true },
       { name: "XL", inStock: true },
