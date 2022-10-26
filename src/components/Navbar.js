@@ -27,9 +27,19 @@ function Navbar() {
         </Link>
 
         <ul className="hidden md:flex justify-center">
-          <li className="p-4">Women</li>
-          <li className="p-4">Men</li>
-          <li className="p-4">Brands</li>
+          <Link to="/collections">
+            {" "}
+            <li className="p-4">Women</li>
+          </Link>
+          <Link to="/collections">
+            {" "}
+            <li className="p-4">Men</li>
+          </Link>
+          <Link to="/collections">
+            {" "}
+            <li className="p-4">Brands</li>
+          </Link>
+
           <Link to="/collections">
             <li className="p-4">Collection</li>
           </Link>
@@ -66,9 +76,17 @@ function Navbar() {
           }
         >
           <ul className="uppercase p-4">
-            <li className="p-4 border-b border-gray-600">Women</li>
-            <li className="p-4 border-b border-gray-600">Men</li>
-            <li className="p-4 border-b border-gray-600">Brands</li>
+            <Link to="/collections">
+              <li className="p-4 border-b border-gray-600">Women</li>
+            </Link>
+            <Link to="/collections">
+              {" "}
+              <li className="p-4 border-b border-gray-600">Men</li>
+            </Link>
+            <Link to="/collections">
+              <li className="p-4 border-b border-gray-600">Brands</li>
+            </Link>
+
             <Link to="/collections">
               <li className="p-4 border-b border-gray-600">Collection</li>
             </Link>
