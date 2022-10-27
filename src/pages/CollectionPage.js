@@ -62,12 +62,12 @@ export default function CollectionPage() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const { productsList, sortProduct, getFilteredProducts } =
     useContext(ProductContext);
-  const [filtersData, setFiltersData] = useState({ sortBy: "", sex: "" });
+  const [filtersData, setFiltersData] = useState({ sortBy: "", type: "" });
 
   const filteredProducts = getFilteredProducts(
     productsList,
     filtersData.sortBy,
-    filtersData.sex
+    filtersData.type
   );
 
   return (
@@ -161,7 +161,8 @@ export default function CollectionPage() {
                                           ...prev,
                                           sortBy:
                                             e.target.checked && section.name,
-                                          sex: e.target.checked && option.value,
+                                          type:
+                                            e.target.checked && option.value,
                                         }));
                                       }}
                                       name={`${section.id}[]`}
@@ -314,7 +315,7 @@ export default function CollectionPage() {
                                     setFiltersData((prev) => ({
                                       ...prev,
                                       sortBy: e.target.checked && section.name,
-                                      sex: e.target.checked && option.value,
+                                      type: e.target.checked && option.value,
                                     }))
                                   }
                                   name={`${section.id}[]`}
