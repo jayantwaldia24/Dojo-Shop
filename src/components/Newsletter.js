@@ -15,7 +15,7 @@ function Newsletter() {
             SUBSCRIBE TO NEWSLETTER
           </p>
           <p className="text-xl">
-            BE THE FIRST TO GET INFORMATION ABOUT THE LATEST DROPS AND PROMOTION
+            BE THE FIRST TO GET INFORMATION ABOUT THE LATEST DROPS AND PROMOTION IN DOJO
           </p>
           <div className="mx-auto mt-10 w-[80%] grid grid-cols-1 justify-center">
             <input
